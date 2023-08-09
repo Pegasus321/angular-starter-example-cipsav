@@ -9,9 +9,21 @@ import { TransportationService } from './transportation.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  username: string;
   cars: Car[];
   constructor(private transportationService: TransportationService) {
     this.cars = this.transportationService.getCars();
+  }
+  phrase = "It's going";
+  update() {
+    this.phrase += ' ..and going';
+  }
+  counter = 0;
+  increment() {
+    this.counter++;
+  }
+  saySomething() {
+    alert('Good Day');
   }
   //now instead of here we import it from transportaion.service.ts
   // subaru: Car = { make: 'Subaru', model: 'Outback', miles: 58232 };

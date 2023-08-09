@@ -9,6 +9,21 @@
 <!-- 
 {{speak()}} -->
 
-<div *ngFor="let car of cars">
+<!-- <div *ngFor="let car of cars">
   {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
+</div> -->
+<!-- <button (click)="saySomething()">Button</button> -->
+<div>
+  <div class='number-display'>
+    {{counter}}
+  </div>  
+<button (click)="increment()">Increment</button>
 </div>
+<div>
+<div class='number-display'>
+  {{phrase}}
+</div>  
+<button (click)="update()">phrase</button>
+</div>
+{{username}}
+<input [(ngModel)]="username" placeholder="enter a username"/>
