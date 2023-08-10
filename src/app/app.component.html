@@ -1,3 +1,8 @@
+<button (click)="addCar()">Add Car</button>
+<input [(ngModel)]="make" placeholder="make" />
+<input [(ngModel)]="model" placeholder="model" />
+<input [(ngModel)]="miles" placeholder="miles" />
+
 <!-- <div class="container">
   <div class="box">Hello, {{ speak() }} !</div>
 </div> -->
@@ -7,13 +12,13 @@
 </div> -->
 
 <!-- 
-{{speak()}} -->
+  {{speak()}} -->
 
-<!-- <div *ngFor="let car of cars">
+<div *ngFor="let car of cars">
   {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
-</div> -->
+</div>
 <!-- <button (click)="saySomething()">Button</button> -->
-<div>
+<!-- <div>
   <div class='number-display'>
     {{counter}}
   </div>  
@@ -26,4 +31,4 @@
 <button (click)="update()">phrase</button>
 </div>
 {{username}}
-<input [(ngModel)]="username" placeholder="enter a username"/>
+<input [(ngModel)]="username" placeholder="enter a username"/> -->

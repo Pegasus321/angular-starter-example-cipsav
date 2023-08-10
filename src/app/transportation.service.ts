@@ -14,6 +14,10 @@ export class TransportationService {
 
   constructor() {}
 
+  addCar(car: Car) {
+    this.cars.push(car);
+  }
+
   // new code
   getCars() {
     return this.cars;

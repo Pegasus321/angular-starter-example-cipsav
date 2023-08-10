@@ -9,22 +9,31 @@ import { TransportationService } from './transportation.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  username: string;
   cars: Car[];
   constructor(private transportationService: TransportationService) {
     this.cars = this.transportationService.getCars();
   }
-  phrase = "It's going";
-  update() {
-    this.phrase += ' ..and going';
+  make: string;
+model: string;
+miles: number;
+
+  addCar() {
+    const newCar: Car = { make: this.make, model:this.model, miles: this.miles };
+    this.transportationService.addCar(newCar);
   }
-  counter = 0;
-  increment() {
-    this.counter++;
-  }
-  saySomething() {
-    alert('Good Day');
-  }
+
+  // username: string;
+  // phrase = "It's going";
+  // update() {
+  //   this.phrase += ' ..and going';
+  // }
+  // counter = 0;
+  // increment() {
+  //   this.counter++;
+  // }
+  // saySomething() {
+  //   alert('Good Day');
+  // }
   //now instead of here we import it from transportaion.service.ts
   // subaru: Car = { make: 'Subaru', model: 'Outback', miles: 58232 };
   // honda: Car = { make: 'Honda', model: 'Accord', miles: 39393 };
